@@ -1,0 +1,27 @@
+import java.util.Scanner;
+ 
+public class InputCalculator {
+    public static void inputThenPrintSumAndAverage(){
+        Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+        long avg = 0;
+        int num;
+        while(true){
+            boolean istrue = sc.hasNextInt();
+            if(istrue){
+                num = sc.nextInt();
+                sum += num;
+                count ++;
+                 avg = Math.round((double) sum / count);
+            }
+            else{
+                
+                break;
+            }
+            sc.nextLine();
+        }
+        System.out.println("SUM = " + sum + " AVG = " + avg);
+        sc.close();
+    }
+}
