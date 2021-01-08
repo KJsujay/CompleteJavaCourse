@@ -1,0 +1,14 @@
+public class SharedDigit {
+    public static boolean hasSharedDigit(int a, int b){
+        if( a >= 10 && a <= 99 && b >= 10 && b <= 99){
+            int firstdigita = a / 10;
+            int lastdigita = a % 10;
+            int firstdigitb = b / 10;
+            int lastdigitb = b % 10;
+            
+            return ((firstdigita == firstdigitb) || (firstdigita == lastdigitb) || (lastdigita == firstdigitb) || (lastdigita == lastdigitb));
+            
+        }
+        return false;
+    }
+}
