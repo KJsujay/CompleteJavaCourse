@@ -1,0 +1,19 @@
+public class EvenDigitSum {
+    public static int getEvenDigitSum(int number){
+        if(number < -1){
+            return -1;
+        }
+        int dupno = number;
+        int single = 0;
+        int sum = 0;
+        while(number != 0){
+            single =  number % 10;
+            if(single % 2 == 0){
+                sum += single;
+            }
+            number /= 10;
+            
+        }
+        return sum;
+    }
+}
